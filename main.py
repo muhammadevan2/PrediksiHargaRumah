@@ -21,7 +21,7 @@ unit_KT = int(input("Masukkan Banyak Kamar Tidur: "))
 unit_GRS = int(input("Masukkan Banyak Garasi: "))
 
 #tombol prediksi
-if st.button('Prediksi')
+if st.button('Prediksi'):
     prediksi = model.predict(([[luas_bangunan, luas_tanah, unit_KM, unit_KT, unit_GRS]]))
     st.write("Harga Prediksi Rumah Sebesar Rp" + harga_format)
     harga_format = "{:,.0f}".format(harga).replace(",", ".")
