@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
 
 #load dataset
 df = pd.read_excel("/content/DATA RUMAH.xlsx")
