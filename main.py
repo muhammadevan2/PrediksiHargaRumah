@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 
 #load dataset
-df = pd.read_excel("/content/DATA RUMAH.xlsx")
+df = pd.read_excel("/data/DATA RUMAH.xlsx")
 
 #train model
 x = data[["LB","LT","KT","KM","GRS"]]
@@ -25,3 +25,4 @@ if st.button('Prediksi'):
     prediksi = model.predict(([[luas_bangunan, luas_tanah, unit_KM, unit_KT, unit_GRS]]))
     st.write("Harga Prediksi Rumah Sebesar Rp" + harga_format)
     harga_format = "{:,.0f}".format(harga).replace(",", ".")
+
